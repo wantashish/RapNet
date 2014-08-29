@@ -1,5 +1,10 @@
 package uk.co.agileLogics.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ashishsri
@@ -7,12 +12,69 @@ package uk.co.agileLogics.Entities;
  * Time: 17:30
  * To change this template use File | Settings | File Templates.
  */
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Diamond {
 
-    private final String sizeTo;
-    private final String shape;
-    private final String clarity;
-    private final String color;
+    private String sizeFrom;
+    private String sizeTo;
+    private String shape;
+    private String clarity;
+    private String color;
+    private String pricePerCt;
+    private String discount;
+    private String ajariPrice;
+    private String ajariDiscount;
+
+    public Diamond(HashMap<String,String> map){
+        for(Map.Entry<String,String> entry: map.entrySet()){
+            String key = entry.getKey();
+            try {
+                String parameter = entry.getValue();
+                Diamond.class.getMethod("set"+key,parameter.getClass()).invoke(this,parameter);
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+        }
+    }
+
+
+    public void setSizeTo(String sizeTo) {
+        this.sizeTo = sizeTo;
+    }
+
+    public void setShape(String shape) {
+        this.shape = shape;
+    }
+
+    public void setClarity(String clarity) {
+        this.clarity = clarity;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setPricePerCt(String pricePerCt) {
+        this.pricePerCt = pricePerCt;
+    }
+
+    public void setDiscount(String discount) {
+        this.discount = discount;
+    }
+
+    public void setAjariPrice(String ajariPrice) {
+        this.ajariPrice = ajariPrice;
+    }
+
+    public void setAjariDiscount(String ajariDiscount) {
+        this.ajariDiscount = ajariDiscount;
+    }
+
+
+    public void setSizeFrom(String sizeFrom) {
+        this.sizeFrom = sizeFrom;
+    }
+
 
     public String getPricePerCt() {
         return pricePerCt;
@@ -30,26 +92,8 @@ public class Diamond {
         return ajariDiscount;
     }
 
-    private final String pricePerCt;
-    private final String discount;
-    private final String ajariPrice;
-    private final String ajariDiscount;
-    private String sizeFrom;
-
     public String getSizeFrom() {
         return sizeFrom;
-    }
-
-    public Diamond(String[] fields) {
-        sizeFrom = fields[0];
-        sizeTo = fields[1];
-        shape = fields[2];
-        clarity = fields[3];
-        color = fields[4];
-        pricePerCt = fields[5];
-        discount = fields[6];
-        ajariPrice = fields[7];
-        ajariDiscount = fields[8];
     }
 
     public String getSizeTo() {

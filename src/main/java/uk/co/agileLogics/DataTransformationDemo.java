@@ -28,6 +28,7 @@ public class DataTransformationDemo {
         // use Guava multimap
         HashMap<String,HashMap<String,HashMap<String,HashMap<String,Diamond>>>> groupedByFourFields =
                 groupByFourFields(diamonds,"SizeFrom","SizeTo","Color","Clarity");
+
         String fileOut = filePath+"/yourfileout.csv";
         MyCSVWriter csvWriter = new MyCSVWriter(fileOut);
         for(Map.Entry<String,HashMap<String,HashMap<String,HashMap<String,Diamond>>>> entryFrom :
