@@ -1,13 +1,18 @@
 package uk.co.agileLogics;
 
-import com.google.common.collect.*;
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 import uk.co.agileLogics.Entities.Diamond;
 import uk.co.agileLogics.Utils.MyCSVReader;
 import uk.co.agileLogics.Utils.MyCSVWriter;
+import uk.co.agileLogics.Utils.StringUtils;
 
 import java.io.File;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,114 +31,51 @@ public class DataTransformationDemo {
         MyCSVReader csvReader = new MyCSVReader(file);
         List<Diamond> diamonds = csvReader.serializeDiamonds();
         csvReader.close();
-        // use Guava multimap
-        HashMap<String,HashMap<String,HashMap<String,HashMap<String,Diamond>>>> groupedByFourFields =
-                groupByFourFields(diamonds,"SizeFrom","SizeTo","Color","Clarity");
-
+        Table<String,String,Table<String,String,Diamond>> sizingTable = HashBasedTable.create();
         String fileOut = filePath+"/yourfileout.csv";
         MyCSVWriter csvWriter = new MyCSVWriter(fileOut);
-        for(Map.Entry<String,HashMap<String,HashMap<String,HashMap<String,Diamond>>>> entryFrom :
-                groupedByFourFields.entrySet()){
-            String keyFrom = entryFrom.getKey();
-            for(Map.Entry<String,HashMap<String,HashMap<String,Diamond>>> entryTo :
-                    entryFrom.getValue().entrySet()){
-                String keyTo = entryTo.getKey();
-                csvWriter.writeLn(keyFrom + "-" + keyTo);
-                System.out.println(keyFrom + "-" + keyTo);
-                writeTable(csvWriter,entryTo.getValue());
+        HashMap<String,List<Diamond>> sizeFromMap = groupDiamondsByField(diamonds,"SizeFrom");
+        for(Map.Entry<String, List<Diamond>> sizeFromEntry : sizeFromMap.entrySet()){
+            String sizeFrom = sizeFromEntry.getKey();
+            HashMap<String,List<Diamond>> sizeToMap = groupDiamondsByField(sizeFromEntry.getValue(),"SizeTo");
+            for(Map.Entry<String,List<Diamond>> sizeToEntry:sizeToMap.entrySet()){
+                String sizeTo = sizeToEntry.getKey();
+                Table<String,String,Diamond> colorClarityTable = HashBasedTable.create();
+                for(Diamond d:sizeToEntry.getValue()){
+                    colorClarityTable.put(d.getColor(),d.getClarity(),d);
+                }
+                sizingTable.put(sizeFrom,sizeTo,colorClarityTable);
+            }
+        }
+        for(String sizeFrom:sizingTable.rowKeySet()){
+            for(String sizeTo:sizingTable.columnKeySet()){
+                Table<String,String,Diamond> diamondsForThisSize = sizingTable.row(sizeFrom).get(sizeTo);
+                if(diamondsForThisSize!=null){
+                    System.out.println(sizeFrom+"-"+sizeTo);
+                    csvWriter.writeLn(sizeFrom+"-"+sizeTo);
+                    writeTable(csvWriter,diamondsForThisSize);
+                }
             }
         }
         csvWriter.flush();
         csvWriter.close();
     }
 
-    private static void writeTable(MyCSVWriter csvWriter, HashMap<String, HashMap<String, Diamond>> map) {
-        String columnNames;
-        String[] rows;
-        Set<String> columns = new HashSet<String>();
-        for(Map.Entry<String,HashMap<String,Diamond>> entryColor: map.entrySet()){
-            HashMap<String,Diamond> clarityMap = entryColor.getValue();
-            columns.addAll(clarityMap.keySet());
-        }
-        Table<String,String,Diamond> outPutTable = HashBasedTable.create();
-//        for(Map
-        rows = map.keySet().toArray(new String[0]);
-        columnNames = Arrays.toString(columns.toArray()).replace("[","").replace("]", "");
+    private static void writeTable(MyCSVWriter csvWriter, Table<String, String, Diamond> map) {
+        String columnNames = StringUtils.concatStringsInSet(map.columnKeySet());
         System.out.println(","+columnNames);
         csvWriter.writeLn(","+columnNames);
-        for(String row: rows){
-            String lineOut=row+",";
-            for(String column:columns){
-                Diamond diamond = map.get(row).get(column);
-                if(diamond!=null){
-                    String diamondInfo = diamond.getPricePerCt()+":"+diamond.getDiscount()+":"+
-                            diamond.getAjariPrice()+":"+diamond.getAjariDiscount();
-                    lineOut = lineOut+diamondInfo;
-                }
-                lineOut = lineOut+",";
+        for(String row:map.rowKeySet()){
+            String out = row;
+            for(String column:map.columnKeySet()){
+                out = out+",";
+                Diamond d = map.row(row).get(column);
+                if(d!=null)out = out+d.getPricePerCt()+":"+d.getDiscount()+":"+
+                        d.getAjariPrice()+":"+d.getAjariDiscount();
             }
-            System.out.println(lineOut);
-            csvWriter.writeLn(lineOut);
+            System.out.println(out);
+            csvWriter.writeLn(out);
         }
-    }
-
-    private static HashMap<String, HashMap<String, HashMap<String, HashMap<String, Diamond>>>> groupByFourFields(
-            List<Diamond> diamonds, String criteria1, String criteria2, String criteria3, String criteria4) {
-        HashMap<String, HashMap<String, HashMap<String, HashMap<String, Diamond>>>> fourDMap =
-                new HashMap<String, HashMap<String, HashMap<String, HashMap<String, Diamond>>>>();
-        HashMap<String,List<Diamond>> groupedByCriteria1 = groupDiamondsByField(diamonds,criteria1);
-        for(Map.Entry<String, List<Diamond>> entry : groupedByCriteria1.entrySet()){
-            String key = entry.getKey();
-            List<Diamond> diamondsForKey = entry.getValue();
-            HashMap<String,HashMap<String,HashMap<String,Diamond>>> threeDMap =
-                    groupByThreeFields(diamondsForKey,criteria2,criteria3,criteria4);
-            fourDMap.put(key,threeDMap);
-        }
-        return fourDMap;
-    }
-
-    private static HashMap<String, HashMap<String, HashMap<String, Diamond>>> groupByThreeFields(
-            List<Diamond> diamonds, String criteria1, String criteria2, String criteria3) {
-        HashMap<String ,HashMap<String,HashMap<String,Diamond>>> threeDMap =
-                new HashMap<String, HashMap<String, HashMap<String, Diamond>>>();
-        HashMap<String,List<Diamond>> groupedByCriteria1 = groupDiamondsByField(diamonds,criteria1);
-        for(Map.Entry<String, List<Diamond>> entry : groupedByCriteria1.entrySet()){
-            String key = entry.getKey();
-            List<Diamond> diamondsForKey = entry.getValue();
-            HashMap<String,HashMap<String,Diamond>> twoDMap =
-                    getTwoDMap(diamondsForKey,criteria2,criteria3);
-            threeDMap.put(key,twoDMap);
-        }
-        return threeDMap;
-    }
-
-    private static HashMap<String, HashMap<String, Diamond>> getTwoDMap(List<Diamond> diamonds,
-                    String criteria1, String criteria2) {
-        HashMap<String, List<Diamond>> mapByCriteria1 = groupDiamondsByField(diamonds, criteria1);
-        HashMap<String, HashMap<String, Diamond>> twoDMap=
-                new HashMap<String, HashMap<String, Diamond>>();
-        for(Map.Entry<String, List<Diamond>> entry : mapByCriteria1.entrySet()){
-            String key = entry.getKey();
-            HashMap<String, Diamond> mapByCriteria2 = mapDiamondsByField(entry.getValue(), criteria2);
-            twoDMap.put(key,mapByCriteria2);
-        }
-        return twoDMap;
-    }
-
-    private static HashMap<String, Diamond> mapDiamondsByField(List<Diamond> diamonds, String field) {
-        Method targetFieldGetter = null;
-        HashMap<String,Diamond> diamondMap = new HashMap<String, Diamond>();
-        try {
-            targetFieldGetter = diamonds.get(0).getClass().getMethod("get"+field);
-            for(Diamond diamond:diamonds){
-                String key = (String) targetFieldGetter.invoke(diamond);
-                if(diamondMap.get(key) == null)
-                    diamondMap.put(key,diamond);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        return diamondMap;  //To change body of created methods use File | Settings | File Templates.
     }
 
     private static HashMap<String, List<Diamond>> groupDiamondsByField(List<Diamond> diamonds, String fieldName) {
@@ -141,7 +83,6 @@ public class DataTransformationDemo {
         HashMap<String, List<Diamond>> mapByField = new HashMap<String, List<Diamond>>();
         try {
             targetFieldGetter = diamonds.get(0).getClass().getMethod("get"+fieldName);
-            //write code to get getter method (rather than explicitly providing name) to avoid NoSuchMethodException
         for(Diamond diamond : diamonds){
             String key = (String) targetFieldGetter.invoke(diamond);
             if(mapByField.get(key) == null){

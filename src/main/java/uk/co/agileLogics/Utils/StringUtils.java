@@ -1,5 +1,8 @@
 package uk.co.agileLogics.Utils;
 
+import java.util.Arrays;
+import java.util.Set;
+
 /**
  * Created with IntelliJ IDEA.
  * User: ashishsri
@@ -16,5 +19,9 @@ public class StringUtils {
             camelCaseString = camelCaseString+part.substring(0,1).toUpperCase()+part.substring(1).toLowerCase();
         }
         return camelCaseString;
+    }
+
+    public static String concatStringsInSet(Set<String> inputSet) {
+        return Arrays.toString(inputSet.toArray()).replace("[","").replace("]", "");  //To change body of created methods use File | Settings | File Templates.
     }
 }
