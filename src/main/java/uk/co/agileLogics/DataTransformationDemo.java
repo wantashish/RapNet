@@ -1,5 +1,6 @@
 package uk.co.agileLogics;
 
+import com.google.common.collect.*;
 import uk.co.agileLogics.Entities.Diamond;
 import uk.co.agileLogics.Utils.MyCSVReader;
 import uk.co.agileLogics.Utils.MyCSVWriter;
@@ -54,6 +55,8 @@ public class DataTransformationDemo {
             HashMap<String,Diamond> clarityMap = entryColor.getValue();
             columns.addAll(clarityMap.keySet());
         }
+        Table<String,String,Diamond> outPutTable = HashBasedTable.create();
+//        for(Map
         rows = map.keySet().toArray(new String[0]);
         columnNames = Arrays.toString(columns.toArray()).replace("[","").replace("]", "");
         System.out.println(","+columnNames);

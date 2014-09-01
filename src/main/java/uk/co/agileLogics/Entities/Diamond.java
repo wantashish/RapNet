@@ -1,6 +1,5 @@
 package uk.co.agileLogics.Entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +11,6 @@ import java.util.Map;
  * Time: 17:30
  * To change this template use File | Settings | File Templates.
  */
-@JsonIgnoreProperties(ignoreUnknown=true)
 public class Diamond {
 
     private String sizeFrom;
@@ -24,6 +22,12 @@ public class Diamond {
     private String discount;
     private String ajariPrice;
     private String ajariDiscount;
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    private String total;
 
     public Diamond(HashMap<String,String> map){
         for(Map.Entry<String,String> entry: map.entrySet()){

@@ -13,7 +13,7 @@ public class StringUtils {
         String camelCaseString = "";
         String[] fieldParts = inputString.trim().split(" ");
         for(String part:fieldParts){
-            camelCaseString = inputString+part.substring(0,1).toUpperCase()+part.substring(1).toLowerCase();
+            camelCaseString = camelCaseString+part.substring(0,1).toUpperCase()+part.substring(1).toLowerCase();
         }
         return camelCaseString;
     }
