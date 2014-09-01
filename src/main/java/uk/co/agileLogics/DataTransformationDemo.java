@@ -24,8 +24,8 @@ import java.util.Map;
 public class DataTransformationDemo {
 
     public static void main(String[] fileLocation){
-        String file = "/Users/ashishsri/Downloads/yourfile.csv";
-//        String file = fileLocation[0];
+//        String file = "/Users/ashishsri/Downloads/yourfile.csv";
+        String file = fileLocation[0];
         File fileObj = new File(file);
         String filePath = fileObj.getParent();
         MyCSVReader csvReader = new MyCSVReader(file);
