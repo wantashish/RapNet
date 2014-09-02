@@ -71,7 +71,7 @@ public class DataTransformationDemo {
                 out = out+",";
                 Diamond d = map.row(row).get(column);
                 if(d!=null)out = out+d.getPricePerCt()+":"+d.getDiscount()+":"+
-                        d.getAjariPrice()+":"+d.getAjariDiscount();
+                        d.getAjariPrice()+":"+d.getAjariDiscount()+":"+d.getTotal();
             }
             System.out.println(out);
             csvWriter.writeLn(out);

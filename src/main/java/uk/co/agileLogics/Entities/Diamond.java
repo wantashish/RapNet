@@ -13,21 +13,24 @@ import java.util.Map;
  */
 public class Diamond {
 
-    private String sizeFrom;
-    private String sizeTo;
-    private String shape;
-    private String clarity;
-    private String color;
-    private String pricePerCt;
-    private String discount;
-    private String ajariPrice;
-    private String ajariDiscount;
+    private String sizeFrom="";
+    private String sizeTo="";
+    private String shape="";
+    private String clarity="";
+    private String color="";
+    private String pricePerCt="";
+    private String discount="";
+    private String ajariPrice="";
+    private String ajariDiscount="";
+    private String total="";
+
+    public String getTotal() {
+        return total;
+    }
 
     public void setTotal(String total) {
         this.total = total;
     }
-
-    private String total;
 
     public Diamond(HashMap<String,String> map){
         for(Map.Entry<String,String> entry: map.entrySet()){
@@ -40,7 +43,6 @@ public class Diamond {
             }
         }
     }
-
 
     public void setSizeTo(String sizeTo) {
         this.sizeTo = sizeTo;
@@ -78,7 +80,6 @@ public class Diamond {
     public void setSizeFrom(String sizeFrom) {
         this.sizeFrom = sizeFrom;
     }
-
 
     public String getPricePerCt() {
         return pricePerCt;
