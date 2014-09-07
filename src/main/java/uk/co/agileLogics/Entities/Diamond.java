@@ -23,6 +23,16 @@ public class Diamond {
     private String ajariPrice="";
     private String ajariDiscount="";
     private String total="";
+    private String misc="";
+
+    public String getMisc() {
+        return misc;
+    }
+
+    public void setMisc(String misc) {
+        this.misc = misc;
+    }
+
 
     public String getTotal() {
         return total;

@@ -24,15 +24,15 @@ import java.util.Map;
 public class DataTransformationDemo {
 
     public static void main(String[] fileLocation){
-//        String file = "/Users/ashishsri/Downloads/yourfile.csv";
-        String file = fileLocation[0];
+        String file = "/Users/ashishsri/Downloads/20140831.csv";
+//        String file = fileLocation[0];
         File fileObj = new File(file);
-        String filePath = fileObj.getParent();
         MyCSVReader csvReader = new MyCSVReader(file);
         List<Diamond> diamonds = csvReader.serializeDiamonds();
         csvReader.close();
         Table<String,String,Table<String,String,Diamond>> sizingTable = HashBasedTable.create();
-        String fileOut = filePath+"/yourfileout.csv";
+        String fileOut = fileObj.getParent()+"/"+fileObj.getName().replace(".csv","_fileout.csv");
+        System.out.println("Writing in file"+fileOut);
         MyCSVWriter csvWriter = new MyCSVWriter(fileOut);
         HashMap<String,List<Diamond>> sizeFromMap = groupDiamondsByField(diamonds,"SizeFrom");
         for(Map.Entry<String, List<Diamond>> sizeFromEntry : sizeFromMap.entrySet()){
@@ -71,7 +71,7 @@ public class DataTransformationDemo {
                 out = out+",";
                 Diamond d = map.row(row).get(column);
                 if(d!=null)out = out+d.getPricePerCt()+":"+d.getDiscount()+":"+
-                        d.getAjariPrice()+":"+d.getAjariDiscount()+":"+d.getTotal();
+                        d.getAjariPrice()+":"+d.getAjariDiscount()+":"+d.getTotal()+":"+d.getMisc();
             }
             System.out.println(out);
             csvWriter.writeLn(out);

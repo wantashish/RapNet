@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" name="Default" comment="">
+    <list default="true" id="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" name="Default" comment="changes for including total field in csv write">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RapNet.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/DataTransformationDemo.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409645466536" ignored="false" />
+    <file path="/DataTransformationDemo.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409881799252" ignored="false" />
     <file path="/pom.xml" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409212452403" ignored="false" />
-    <file path="/fragment.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409586583263" ignored="false" />
-    <file path="/Diamond.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409646370536" ignored="false" />
+    <file path="/fragment.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409881709211" ignored="false" />
+    <file path="/Diamond.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409881588439" ignored="false" />
     <file path="/DiamondMap.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409092057143" ignored="false" />
     <file path="/Diamond2DMap.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409091480131" ignored="false" />
     <file path="/a.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409093731402" ignored="false" />
     <file path="/MyCSVWriter.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409113923661" ignored="false" />
-    <file path="/MyCSVReader.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409311319014" ignored="false" />
-    <file path="/Dummy.txt" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409592075085" ignored="false" />
+    <file path="/MyCSVReader.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409881979255" ignored="false" />
+    <file path="/Dummy.txt" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1410115235044" ignored="false" />
     <file path="/FileFormatNotCorrectException.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409216001223" ignored="false" />
     <file path="/SampleTesting.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409300427655" ignored="false" />
     <file path="/StringUtils.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409563246727" ignored="false" />
@@ -35,6 +36,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -87,37 +89,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" line="39" class="uk.co.agileLogics.Utils.MyCSVReader" package="uk.co.agileLogics.Utils">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" line="32" class="uk.co.agileLogics.DataTransformationDemo" package="uk.co.agileLogics">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" line="31" class="uk.co.agileLogics.Utils.MyCSVReader" package="uk.co.agileLogics.Utils">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" line="56" class="uk.co.agileLogics.Utils.MyCSVReader" package="uk.co.agileLogics.Utils">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -133,7 +105,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -155,24 +126,21 @@
       <file leaf-file-name="DataTransformationDemo.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="48" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.556213">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3569#3592#0" expanded="true" />
-              </folding>
+            <state line="33" column="29" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.57522124">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="yourfile.csv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/SampleData/yourfile.csv">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
@@ -188,7 +156,7 @@
       <file leaf-file-name="MyCSVReader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="37" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0">
+            <state line="66" column="48" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -198,9 +166,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/StringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="40" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -235,7 +201,7 @@
       <file leaf-file-name="Diamond.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="27" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+            <state line="25" column="20" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -265,10 +231,10 @@
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Exceptions/FileFormatNotCorrectException.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/SampleTesting.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" />
       </list>
     </option>
   </component>
@@ -326,6 +292,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -502,8 +470,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -521,9 +487,9 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -578,6 +544,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -604,19 +583,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -712,7 +678,11 @@
       <created>1409592081426</created>
       <updated>1409592081426</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changes for including total field in csv write">
+      <created>1409646520930</created>
+      <updated>1409646520930</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -722,7 +692,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -738,11 +707,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.67" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3249595" sideWeight="0.67" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3249595" sideWeight="0.6716667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -788,7 +758,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="change for accepting file path as parameter" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes for including total field in csv write" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -807,6 +777,7 @@
     <MESSAGE value="fixed the bug for fieldnames" />
     <MESSAGE value="used Guava 'Table' collection to manage the data" />
     <MESSAGE value="change for accepting file path as parameter" />
+    <MESSAGE value="changes for including total field in csv write" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -847,10 +818,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="41" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3569#3592#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -861,21 +829,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="23" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/SampleData/yourfile.csv">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Exceptions/FileFormatNotCorrectException.java">
@@ -909,33 +870,35 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="40" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="23" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="37" selection-start="1030" selection-end="1030" vertical-scroll-proportion="0.0">
+        <state line="66" column="48" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+        <state line="25" column="20" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="48" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.556213">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3569#3592#0" expanded="true" />
-          </folding>
+        <state line="33" column="29" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.57522124">
+          <folding />
         </state>
       </provider>
     </entry>

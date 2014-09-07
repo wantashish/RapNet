@@ -49,10 +49,25 @@ public class MyCSVReader {
                     // assumption is the csv file has first row as field names.
                 }else {
                     String[] fieldValues = line.split(fieldDelimiter);
-                    int usableFieldCount = Math.min(fieldNames.size(),fieldValues.length);
-                    for(int i=0;i<usableFieldCount;i++){
-                        csvMap.put(fieldNames.get(i), fieldValues[i]);
+//                    int usableFieldCount = Math.min(fieldNames.size(),fieldValues.length);
+//                    for(int i=0;i<usableFieldCount;i++){
+//                        csvMap.put(fieldNames.get(i), fieldValues[i]);
+//                    }
+//                  XXXXXXXXXXXXXXXXX
+                    for(int i=0;i<fieldValues.length;i++){
+                        if(i>=fieldNames.size()){
+                            String s = "";
+                            for(int j=i;j<fieldValues.length;j++){
+                                s = s+fieldValues[j];
+                            }
+                            csvMap.put("Misc",s);
+                            break;
+                        }
+                        else {
+                            csvMap.put(fieldNames.get(i), fieldValues[i]);
+                        }
                     }
+//                  XXXXXXXXXXXXXXXXX
                 }
                 if(csvMap.size()!=0) listOfMap.add(csvMap);
             }
