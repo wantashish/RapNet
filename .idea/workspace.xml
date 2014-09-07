@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" name="Default" comment="changes for including total field in csv write">
+    <list default="true" id="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RapNet.iws" />
@@ -18,7 +16,7 @@
     <file path="/a.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409093731402" ignored="false" />
     <file path="/MyCSVWriter.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409113923661" ignored="false" />
     <file path="/MyCSVReader.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409881979255" ignored="false" />
-    <file path="/Dummy.txt" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1410115235044" ignored="false" />
+    <file path="/Dummy.txt" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1410121301838" ignored="false" />
     <file path="/FileFormatNotCorrectException.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409216001223" ignored="false" />
     <file path="/SampleTesting.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409300427655" ignored="false" />
     <file path="/StringUtils.java" changelist="46da9242-7d1d-4ea6-a00b-db6cd4fce24c" time="1409563246727" ignored="false" />
@@ -126,7 +124,7 @@
       <file leaf-file-name="DataTransformationDemo.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="29" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.57522124">
+            <state line="28" column="30" selection-start="832" selection-end="832" vertical-scroll-proportion="0.44609666">
               <folding />
             </state>
           </provider>
@@ -233,8 +231,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Entities/Diamond.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/Utils/MyCSVReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java" />
       </list>
     </option>
   </component>
@@ -292,7 +290,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -470,6 +467,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -487,9 +485,9 @@
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -544,19 +542,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -583,6 +568,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -682,7 +680,11 @@
       <created>1409646520930</created>
       <updated>1409646520930</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="made changes to include further columns beyond total and save them in misc field printing them out with other details of each row.">
+      <created>1410115601013</created>
+      <updated>1410115601013</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -700,7 +702,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -708,11 +709,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3249595" sideWeight="0.6716667" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32833335" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -758,7 +760,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes for including total field in csv write" />
+    <option name="LAST_COMMIT_MESSAGE" value="made changes to include further columns beyond total and save them in misc field printing them out with other details of each row." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -778,6 +780,7 @@
     <MESSAGE value="used Guava 'Table' collection to manage the data" />
     <MESSAGE value="change for accepting file path as parameter" />
     <MESSAGE value="changes for including total field in csv write" />
+    <MESSAGE value="made changes to include further columns beyond total and save them in misc field printing them out with other details of each row." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -897,7 +900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/agileLogics/DataTransformationDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.57522124">
+        <state line="28" column="30" selection-start="832" selection-end="832" vertical-scroll-proportion="0.44609666">
           <folding />
         </state>
       </provider>

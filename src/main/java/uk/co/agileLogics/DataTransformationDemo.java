@@ -24,8 +24,8 @@ import java.util.Map;
 public class DataTransformationDemo {
 
     public static void main(String[] fileLocation){
-        String file = "/Users/ashishsri/Downloads/20140831.csv";
-//        String file = fileLocation[0];
+//        String file = "/Users/ashishsri/Downloads/20140831.csv";
+        String file = fileLocation[0];
         File fileObj = new File(file);
         MyCSVReader csvReader = new MyCSVReader(file);
         List<Diamond> diamonds = csvReader.serializeDiamonds();
